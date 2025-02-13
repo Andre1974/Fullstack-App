@@ -9,7 +9,7 @@ tasksRouter
         console.log("uuid",randomUUID());
         try {
             const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
-            res.status(200).json({})
+            res.status(200).json({data});
         } catch (error) {
             res.status(500).json({msg:"Serverfehler"})
         }
